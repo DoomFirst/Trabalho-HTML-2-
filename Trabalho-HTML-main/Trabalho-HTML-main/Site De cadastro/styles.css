@@ -1,0 +1,151 @@
+/* Estilos gerais */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(41, 39, 39, 0.8); /* Fundo semi-transparente */
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: 1; /* Coloca o cabeçalho acima do vídeo */
+}
+
+header img {
+  width: 7%;
+  margin-right: 20px; /* Adiciona uma margem direita entre as imagens */
+  transition: transform 0.3s ease; /* Adiciona uma transição suave ao efeito */
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0; /* Coloca o vídeo atrás de outros elementos */
+}
+
+#background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  padding: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container form {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  background-color: rgba(104, 102, 102, 0.8);
+  border-radius: 10px;
+}
+
+#editForm {
+  display: none; /* Inicia oculto */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Coloca acima do vídeo */
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: rgba(104, 102, 102, 0.8);
+  border-radius: 10px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: calc(100% - 20px); /* Ajusta a largura do input */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para a tabela */
+.cadastros-table {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 50px;
+}
+
+table {
+  width: 100%; /* Largura ajustada */
+  border-collapse: collapse;
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo transparente */
+  color: #fff; /* Texto em branco */
+  border-radius: 10px; /* Adiciona bordas arredondadas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Adiciona sombra */
+}
+
+table th,
+table td {
+  padding: 12px; /* Aumenta o espaçamento interno */
+  border: 1px solid #ddd;
+  text-align: center; /* Centraliza o texto */
+}
+
+table th {
+  background-color: #333; /* Fundo da célula do cabeçalho */
+  color: #fff; /* Texto do cabeçalho em branco */
+}
+
+/* Estilo para linhas alternadas */
+table tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.1); /* Fundo das linhas pares */
+}
+
+/* Estilo para os botões na tabela */
+table button {
+  padding: 6px 10px; /* Reduz o tamanho dos botões */
+  border-radius: 5px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 2px;
+}
+
+table button:hover {
+  background-color: #c82333;
+}
